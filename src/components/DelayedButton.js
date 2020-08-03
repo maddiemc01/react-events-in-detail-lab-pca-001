@@ -11,7 +11,7 @@ export default class DelayedButton extends Component {
     event.persist()
     // will pass the click event to the onDelayedClick prop within a setTimeout()
     // this.props.onDelayedClick(event)
-    setTimeout( () => this.props.onDelayedClick(event), this.props.delay)
+    setTimeout( () => this.props.delay, this.props.onDelayedClick(event))
   }
   render(){
     return (
